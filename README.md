@@ -1,7 +1,7 @@
 # TidyTuesday
-####Code written by Erin Michele Roberts, PhD Candidate
-####USDA NIFA Pre-Doctoral Fellow
-####University of Rhode Island, Fisheries, Animal, and Veterinary Science
+#### Code written by Erin Michele Roberts, PhD Candidate
+#### USDA NIFA Pre-Doctoral Fellow
+#### University of Rhode Island, Fisheries, Animal, and Veterinary Science
 
 Repository hosting plotting and analysis code for #tidytuesday
 
