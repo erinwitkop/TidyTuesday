@@ -184,7 +184,6 @@ fonts()
       caption = "Erin Roberts, PhD Candidate \n source: Smithsonian Institution")  
 
 ggsave(filename="Volcano_5_12_2020.png")
-       plot=last_plot(), width=11, height = 9, dpi=400)
- 
+
 
 # Website with helpful information about lahars: https://volcanoes.usgs.gov/vhp/lahars.html
