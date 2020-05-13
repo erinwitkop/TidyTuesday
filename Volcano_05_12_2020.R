@@ -12,6 +12,7 @@ library(htmltools)
 library(plotly)
 library(viridis)
 library(mapproj)
+library(extrafont)
 
 # Get the Data
 volcano <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-05-12/volcano.csv')
@@ -156,10 +157,14 @@ lahar_frequency_join <- lahar_frequency_join[!duplicated(lahar_frequency_join$re
 lahar_frequency_join <- drop_na(lahar_frequency_join)
 
 # Make custom breaks
-mybreaks <- c(0.05, 1, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5)
+mybreaks <- c(0.0, 1, 2.0, 3.0, 4.0, 5.0, 6.0)
+
+# add in fonts
+#font_import()
+fonts()
 
 # Plot lahar frequency using bubble plot 
- ggplot() +
+ bubble_plot <- ggplot() +
   geom_polygon(data = world_map, aes(x=long, y = lat, group=group), fill="grey", alpha=4) + 
    coord_map(xlim=c(-180,180)) +
     geom_point( data=lahar_frequency_join , aes(x=long, y=lat, size=lahar_frequency, color=lahar_frequency), stroke=FALSE) +
@@ -169,12 +174,17 @@ mybreaks <- c(0.05, 1, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5)
    scale_alpha_continuous(name="Lahar Frequency by Country (%)", range=c(0.1, .9),breaks=mybreaks) +
    scale_color_viridis(name="Lahar Frequency by Country (%)" ,breaks=mybreaks) +
    #labs(color="Lahar Frequency by Country (%)")+ 
-   theme(plot.title = element_text(size= 14, hjust=0.1, margin = margin(b = -0.1, t = 0.4, l = 2, unit = "cm")),
+   theme(plot.title = element_text(size= 18, hjust=0.6, margin = margin(b = -0.1, t = 0.4, l = 2, unit = "cm")),
          plot.background = element_rect(fill = "#f5f5f2", color = NA), 
+         legend.text = element_text(size=14),
          panel.background = element_rect(fill = "#f5f5f2", color = NA), 
-         legend.background = element_rect(fill = "#f5f5f2", color = NA)) +
-   labs(title = "Lahars are a small percentage of volcanic events",
-      caption = "Erin Roberts, PhD Candidate \n source: Smithsonian Institution")
+         legend.background = element_rect(fill = "#f5f5f2", color = NA),
+         text=element_text(family="Arial", face = "bold")) +
+   labs(title = "Lahars are a Small Percentage of Volcanic Events",
+      caption = "Erin Roberts, PhD Candidate \n source: Smithsonian Institution")  
 
-ggsave(filename="Volcano_5_12_2020.png", plot=last_plot(), width=11, height = 9, dpi=400)
+ggsave(filename="Volcano_5_12_2020.png")
+       plot=last_plot(), width=11, height = 9, dpi=400)
  
+
+# Website with helpful information about lahars: https://volcanoes.usgs.gov/vhp/lahars.html
