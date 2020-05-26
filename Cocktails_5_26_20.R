@@ -79,7 +79,7 @@ cocktails_alc_cat_percent_top$category <- factor(cocktails_alc_cat_percent_top$c
 ggplot(cocktails_alc_cat_percent_top, aes(x=category, y=percent_drinks , fill=ingredient)) + geom_bar(position = "fill", stat="identity") + 
   geom_text(aes(label=ingredient), stat="identity", position=position_fill(vjust=0.5)) +
   #annotate(cocktails_alc_cat_percent_top$ingredient,label=cocktails_alc_cat_percent_top$ingredient) +
-labs(title = "Top 20% of Drink Ingredients for Each Occasion",
+labs(title = "Top Drink Ingredients for Each Occasion",
        caption = "Erin Roberts, PhD Candidate \n source: Kaggle",
      x = "Drink Category", y = "Percent of Drinks") + 
   scale_fill_manual(values=colorset) +
