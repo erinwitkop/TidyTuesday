@@ -37,7 +37,7 @@ blackpast %>%
   scale_x_discrete(position="top")+
   # labels
   labs(x=NULL, y=NULL,
-       subtitle = "Data reveals lack of visibility of African-American 21st STEM Acheivements",
+       subtitle = "Data reveals lack of visibility of African-American 21st Century STEM Acheivements",
   caption="Plot by Erin M. Roberts | Source: https://www.blackpast.org/african-american-history-timeline/",
   title="African-American recognized Science Acheivements Since 1900") +
   # add colors for each category
