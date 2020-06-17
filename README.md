@@ -11,4 +11,4 @@ Repository hosting plotting and analysis code for #tidytuesday
 	2. May 5th, 2020 - "Animal Crossing Items Depreciate in Value". Script name: Animal_Crossing_5_5_2020.R
 	3. May 26th, 2020 - "Top 20% of Drink Ingredients for Each Occasion"
 	4. June 2nd, 2020 - "Probability of Lap Times for Racing Marbles Across Races"
-
+	5. June 16th, 2020 - "African-American recognized Science Acheivements Since 1900"
