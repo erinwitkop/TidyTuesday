@@ -39,7 +39,7 @@ blackpast %>%
   labs(x=NULL, y=NULL,
        subtitle = "Data reveals lack of visibility of African-American 21st Century STEM Acheivements",
   caption="Plot by Erin M. Roberts | Source: https://www.blackpast.org/african-american-history-timeline/",
-  title="African-American recognized Science Acheivements Since 1900") +
+  title="African-American Recognized Science Acheivements Since 1900") +
   # add colors for each category
   scale_color_manual(values=c("#7aa456", "#c65999", "#c96d44","#777acd"))+
   # change the theme
