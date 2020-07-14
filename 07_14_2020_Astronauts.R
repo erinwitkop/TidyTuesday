@@ -7,11 +7,10 @@ library(tidyverse)
 library(ggrepel)
 library(ggdark)
 
-
 # load data 
 astronauts <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-14/astronauts.csv')
 
-# Astronauts with the most time in space with the highest mission hours
+# Astronauts with the most time in space 
 astronauts %>%
   group_by(name, nationality) %>% 
   # calculate the total hours for each shuttle

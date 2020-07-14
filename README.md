@@ -12,3 +12,5 @@ Repository hosting plotting and analysis code for #tidytuesday
 	3. May 26th, 2020 - "Top 20% of Drink Ingredients for Each Occasion"
 	4. June 2nd, 2020 - "Probability of Lap Times for Racing Marbles Across Races"
 	5. June 16th, 2020 - "African-American recognized Science Acheivements Since 1900"
+	6. June 14th, 2020 - "Hours in Space Per Astronaut"
+
